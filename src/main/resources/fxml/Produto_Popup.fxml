@@ -20,7 +20,7 @@
             </HBox>
          </children>
       </Pane>
-      <TableView prefHeight="354.0" prefWidth="600.0">
+      <TableView VBox.vgrow="always">
         <columns>
           <TableColumn prefWidth="75.0" text="Nome" />
           <TableColumn prefWidth="75.0" text="Preço" />

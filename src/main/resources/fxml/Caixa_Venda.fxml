@@ -4,9 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #5555;">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufla.sistemas.cinema.FXMLGerenciarProdutos">   <children>
+      <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #dae0e5;">
          <children>
             <HBox layoutX="14.0" layoutY="12.0" prefHeight="60.0" prefWidth="160.0">
                <children>
@@ -25,7 +24,7 @@
             <Label layoutX="367.0" layoutY="21.0" text="Preço Final" />
          </children>
       </Pane>
-      <TableView prefHeight="317.0" prefWidth="496.0">
+      <TableView VBox.vgrow="always">
         <columns>
           <TableColumn prefWidth="109.0" text="Produto" />
           <TableColumn prefWidth="118.0" text="Preço" />

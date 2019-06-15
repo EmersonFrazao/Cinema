@@ -65,7 +65,22 @@ public class FXMLMain implements Initializable{
                 new Image("/icons/filme.png"),
                 new Image("/icons/filme_active.png")
         );
-        filmes.setOnAction(nadaImplPopup);
+         filmes.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent t) {
+                while(embedder.getChildren().isEmpty() == false){
+                    embedder.getChildren().remove(0);
+                }
+                    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Filmes.fxml"));
+                try {
+                    embedder.getChildren().add((VBox)loader.load());
+                } catch (IOException ex) {
+                    Logger.getLogger(FXMLMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+        });  
+        //filmes.setOnAction(nadaImplPopup);
         
         ToolBarButton sessoes = new ToolBarButton(
                 "Sessões",
@@ -106,7 +121,21 @@ public class FXMLMain implements Initializable{
                 new Image("/icons/produtos.png"),
                 new Image("/icons/produtos_active.png")
         );
-        caixa.setOnAction(nadaImplPopup);
+        caixa.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent t) {
+                while(embedder.getChildren().isEmpty() == false){
+                    embedder.getChildren().remove(0);
+                }
+                    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Caixa_Venda.fxml"));
+                try {
+                    embedder.getChildren().add((VBox)loader.load());
+                } catch (IOException ex) {
+                    Logger.getLogger(FXMLMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+        });  
         mVChildren.add(caixa);
     }
 }
