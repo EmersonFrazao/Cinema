@@ -58,7 +58,21 @@ public class FXMLMain implements Initializable{
                 new Image("/icons/cinema_room.png"),
                 new Image("/icons/cinema_room_active.png")
         );
-        salas.setOnAction(nadaImplPopup);
+        salas.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent t) {
+                while(embedder.getChildren().isEmpty() == false){
+                    embedder.getChildren().remove(0);
+                }
+                    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Salas.fxml"));
+                try {
+                    embedder.getChildren().add((VBox)loader.load());
+                } catch (IOException ex) {
+                    Logger.getLogger(FXMLMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+        });  
         
         ToolBarButton filmes = new ToolBarButton(
                 "Filmes",
@@ -87,8 +101,21 @@ public class FXMLMain implements Initializable{
                 new Image("/icons/sessao.png"),
                 new Image("/icons/sessao_active.png")
         );
-        sessoes.setOnAction(nadaImplPopup);
-        
+        sessoes.setOnAction(new EventHandler<ActionEvent>(){
+            public void handle(ActionEvent t) {
+                while(embedder.getChildren().isEmpty() == false){
+                    embedder.getChildren().remove(0);
+                }
+                    
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Sessões.fxml"));
+                try {
+                    embedder.getChildren().add((VBox)loader.load());
+                } catch (IOException ex) {
+                    Logger.getLogger(FXMLMain.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+        });  
         ToolBarButton produtos = new ToolBarButton(
                 "Produtos",
                 new Image("/icons/produtos.png"),
