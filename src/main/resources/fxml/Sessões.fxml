@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufla.sistemas.cinema.FXMLGerenciarProdutos">   <children>
+      <Pane prefHeight="39.0" prefWidth="600.0" style="-fx-background-color: #dae0e5;">
+         <children>
+            <HBox layoutX="7.0" layoutY="5.0" prefHeight="60.0" prefWidth="244.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="109.0" text="Inserir" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <TableView VBox.vgrow="always">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Sala" />
+          <TableColumn prefWidth="100.0" text="Dia" />
+            <TableColumn prefWidth="90.0" text="Hora" />
+            <TableColumn prefWidth="334.0" text="Filme" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
